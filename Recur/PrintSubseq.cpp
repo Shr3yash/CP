@@ -22,6 +22,7 @@ int main()
 	#endif
 
 	int arr[]={4,55,89,1,3};
+	int x = sizeof(arr)/sizeof(arr[0]);
     vector<int> v;
 	recur(0, v, arr, 5);
 }
