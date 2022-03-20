@@ -12,9 +12,7 @@ void recur(int s, vector<int> &v, int arr[], int x){
 	v.push_back(arr[s]);
 	recur(s+1, v, arr, x);
 	v.pop_back();
-	recur(s+1, v, arr, x);
-
-	
+	recur(s+1, v, arr, x);	
 }
 int main()
 {
