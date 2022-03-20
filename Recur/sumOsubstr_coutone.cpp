@@ -1,4 +1,4 @@
-int s(vector<int>& v, int strtv, int asize, int arr[], int sum, int& res){
+void s(vector<int>& v, int strtv, int asize, int arr[], int sum, int& res){
   if(strtv==asize)
   {
     if(sum==res)
@@ -26,7 +26,7 @@ int main(){
   int arr[]={1,3,5,2,1};
   int sum=5;
   int res=0;
-  int asize =  sizeof(arr[])/sizeof(arr[0]);
+  int asize =  sizeof(arr)/sizeof(arr[0]);
   vector<int> v;
   s(v, 0, asize, arr, sum, res);
 }
