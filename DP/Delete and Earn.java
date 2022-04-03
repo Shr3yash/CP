@@ -33,3 +33,35 @@ class Solution {
         return maxReturn(maxValue);
     }
 }
+
+
+//BottomUp
+
+class Solution {
+     public int deleteAndEarn(int[] nums) 
+     {
+         HashMap<Integer, Integer> freq = new HashMap();
+         int maxValue=0;
+         
+         for(Integer num : nums)
+         {
+             freq.put(num, freq.getOrDefault(num, 0)+num);
+             maxValue = Math.max(maxValue, num);
+         }
+         
+         int[] maxReturn = new int[maxValue+1];
+         
+         maxReturn[0] = 0; //unnecessary
+         maxReturn[1] = freq.getOrDefault(1, 0);
+         
+         for(int i = 2; i<=maxValue; i++)
+         {
+             int gain = freq.getOrDefault(i, 0);
+             int pick = gain + maxReturn[i-2];
+             int notpick = maxReturn[i-1];
+             maxReturn[i] =  Math.max(pick, notpick);
+         }
+        
+         return maxReturn[maxValue];
+     }
+}
