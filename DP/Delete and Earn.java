@@ -65,3 +65,37 @@ class Solution {
          return maxReturn[maxValue];
      }
 }
+
+//space optimuzation
+
+class Solution {
+     public int deleteAndEarn(int[] nums) 
+     {
+         HashMap<Integer, Integer> freq = new HashMap();
+         Integer maxValue = 0;
+         
+         for(Integer num : nums)
+         {
+             freq.put(num, freq.getOrDefault(num, 0)+num);
+             maxValue = Math.max(maxValue, num);
+         }
+         
+         int prev =  freq.getOrDefault(1, 0);
+         int prev1 = 0;
+         
+         for(int i = 2; i<=maxValue; i++)
+         {
+             int gain = freq.getOrDefault(i, 0);
+             // int cur = Math.max(prev + gain, prev1);
+             // prev = cur;
+             // prev1 = prev; 
+             
+             int temp = prev;
+             prev =  Math.max(prev1 + gain, prev);
+             prev1 = temp;
+            
+             
+         }
+         return prev;
+     }
+}
