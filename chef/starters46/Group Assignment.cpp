@@ -12,14 +12,16 @@ int main() {
 	        while (cin>>grpSz) frq[grpSz]++;
 	    }
 	    
+	    bool flag;
+	    
 	    unordered_map<int, int>:: iterator p;
         for (p = frq.begin(); p != frq.end(); p++){
 	        if(p->first!=p->second){
 	            cout<<"No"<<'\n';
-	            break;
+	            flag=false;
 	        }
-	    }
-	    cout<<"yEs"<<'\n';
+	    } if(!flag)cout<<"yEs"<<'\n';
+	    
 	}
 	return 0;
 }
