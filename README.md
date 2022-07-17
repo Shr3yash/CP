@@ -12,6 +12,8 @@ Stephan Pochmann's BRILLIANCY in game of life prob:
         for( x = max(i-1, 0); x<min(i+2, m); ++x);
 
         for( y = max(j-1, 0); y<min(j+2, m); ++y);
+        
+We are checking all 8 surrounding cells around along with i,j 
 
 
 
