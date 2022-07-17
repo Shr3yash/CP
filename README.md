@@ -1,7 +1,20 @@
 # CP
 SheSellsSeaShellsByTheSeaShore
 
+Stephan Pochmann's BRILLIANCY in game of life prob: 
+for( i 0->m )
+  for( j 0->n )
+    for( x = max(i-1, 0); x<min(i+2, m); ++x)
+    for( y = max(j-1, 0); y<min(j+2, m); ++y)
+
+Since the board has ints but only the 1-bit is used, I use the 2-bit to store the new state. At the end, replace the old state with the new state by shifting all values one bit to the right.
+
+Note that the count counts the live ones among a cell's neighbors and the cell itself. Starting with int count = -board[i][j] counts only the live neighbors and allows the neat
+
+if ((count | board[i][j]) == 3)
+
 <h1> Randomm </h1>
+
 ![image](https://user-images.githubusercontent.com/60093808/164612600-da7a90c4-1d11-4544-9cfa-7f87168392b4.png)
 
 
