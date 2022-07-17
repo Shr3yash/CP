@@ -2,10 +2,18 @@
 SheSellsSeaShellsByTheSeaShore
 
 Stephan Pochmann's BRILLIANCY in game of life prob: 
-for( i 0->m )
-  for( j 0->n )
-    for( x = max(i-1, 0); x<min(i+2, m); ++x)
-    for( y = max(j-1, 0); y<min(j+2, m); ++y)
+
+
+
+    for( i 0->m )
+
+      for( j 0->n )
+
+        for( x = max(i-1, 0); x<min(i+2, m); ++x);
+
+        for( y = max(j-1, 0); y<min(j+2, m); ++y);
+
+
 
 Since the board has ints but only the 1-bit is used, I use the 2-bit to store the new state. At the end, replace the old state with the new state by shifting all values one bit to the right.
 
