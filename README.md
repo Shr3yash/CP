@@ -1,8 +1,10 @@
 # CP
 SheSellsSeaShellsByTheSeaShore
 
-Stephan Pochmann's BRILLIANCY in game of life prob: 
+[Template for all combination problems in C++](https://leetcode.com/problems/combination-sum-iv/discuss/85120/C++-template-for-ALL-Combination-Problem-Set)
 
+
+Stephan Pochmann's BRILLIANCY in game of life prob: 
 
 
     for( i 0->m )
