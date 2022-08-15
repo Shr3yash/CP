@@ -1,0 +1,22 @@
+int findFloor(BinaryTreeNode<int>* root, int key){
+
+  int floor=-;
+  
+  while(root){
+    
+    if(root->data == key) return key;
+    
+    if(key>root->data){
+      floor=root->data;
+      root=root->right;
+    }
+    
+    if(key<root->data){
+      root=root->left;
+    }
+    
+  }
+  
+  return floor;
+  
+}
