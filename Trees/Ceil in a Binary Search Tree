@@ -1,0 +1,15 @@
+int findCeil(BinaryTreeNode<int>* root, int key){
+    int ceil=-1;
+    while(root){
+        if(key==root->data) return key;
+
+        else if(key<root->data) {
+            root->left;
+            ceil=root->data;
+        }
+        else if(key>root->data) {
+            root=root->right;
+        }
+    }
+    return ceil;
+}
