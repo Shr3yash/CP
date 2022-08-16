@@ -1,0 +1,42 @@
+class Solution{
+  public:
+    // returns the inorder successor of the Node x in BST (rooted at 'root')
+    Node * inOrderSuccessor(Node *root, Node *x)
+    {
+        //call from root till the target node 
+        //then if it is a leaf node backtrack and return the first value which is greater than itself
+        //if not leaf node then traverse right and then return the doomed left 
+        //if doomed left is null return the right node itself.
+
+        //return striver(root, x);
+        Node* suc=NULL;
+        return recur(root, x->val, suc);
+    }
+
+    Node* striver(Node* root, Node* x){
+        Node* successor = NULL;
+        while(root){
+            if(x->val >= root->val){
+                root=root->right;
+            }
+            else if(x->val < root->val){
+                successor=root;
+                root=root->left;
+            }
+        }
+        return successor;
+
+    }
+
+    void recur(Node* root, int key, Node* successor){
+        if(root==NULL) return;
+
+        if(key>root->val){
+            recur(root->right, key, successor);
+        }
+        else if(key<=root->val){
+            recur(root->right, key, root);
+        }
+    }
+
+};
