@@ -1,0 +1,11 @@
+class Solution{
+private: unordered_set<TreeNode*> s;
+public:
+    bool existsOrNot(TreeNode* root, int key){
+        if(!root) return false;
+        if(s.count(key - root->val)) return true;
+        else s.insert(root->val);
+        
+        return existsOrNot(root->right, key) || existsOrNot(root->left, key);
+    }
+};
